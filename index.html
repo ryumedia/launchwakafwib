@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launching Wakafwid.id</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .launch-button {
+            background: linear-gradient(135deg, #dc2626, #b91c1c);
+            transition: all 0.3s ease;
+            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.4);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 8px solid #fca5a5;
+            position: relative;
+            overflow: hidden;
+            animation: pulseZoom 2s ease-in-out infinite;
+        }
+        
+        .launch-button:hover {
+            background: linear-gradient(135deg, #b91c1c, #991b1b);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(220, 38, 38, 0.5);
+            border-color: #f87171;
+        }
+        
+        .launch-button:active {
+            transform: translateY(0);
+        }
+        
+        @keyframes pulseZoom {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(0);
+            animation: rippleEffect 0.8s linear;
+            pointer-events: none;
+        }
+        
+        @keyframes rippleEffect {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+        
+        .water-wave {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            transform: translate(-50%, -50%) scale(0);
+            animation: waterWave 3s ease-out infinite;
+        }
+        
+        .water-wave:nth-child(2) {
+            animation-delay: 1s;
+        }
+        
+        .water-wave:nth-child(3) {
+            animation-delay: 2s;
+        }
+        
+        @keyframes waterWave {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(2);
+                opacity: 0;
+            }
+        }
+        
+        .floating-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: sparkle 2s linear infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+        
+        .countdown-bg {
+            background: linear-gradient(135deg, #064e3b, #065f46, #047857);
+        }
+    </style>
+</head>
+<body class="countdown-bg min-h-screen flex items-center justify-center relative overflow-hidden">
+    <!-- Background decorative elements -->
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="sparkle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="sparkle" style="top: 60%; left: 80%; animation-delay: 0.5s;"></div>
+        <div class="sparkle" style="top: 30%; left: 70%; animation-delay: 1s;"></div>
+        <div class="sparkle" style="top: 80%; left: 20%; animation-delay: 1.5s;"></div>
+        <div class="sparkle" style="top: 10%; left: 60%; animation-delay: 2s;"></div>
+        <div class="sparkle" style="top: 70%; left: 40%; animation-delay: 2.5s;"></div>
+    </div>
+    
+    <!-- Main content -->
+    <div class="text-center z-10 px-6 max-w-4xl mx-auto">
+        <!-- Logo/Brand area -->
+        <div class="floating-animation mb-8">
+            <div class="inline-flex items-center justify-center mb-6">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgFA7wFIAHL20oAAM_weD6OZJzG1dtz9SopXq6eTR70D81OOuZHyC0edylYgx6gvez6Iek0FYMJv79ufWqH7h4W8YYtHNN9SBz3w2dwysHGnCihoDIsNnmw2i66yLOWhmPme9OgejI4CRheBYSZboKkTiZ5-MFOrhVP4IwZcNl64likLZj5dGfgHWSVq_4/s500/Logo%20(12).png" 
+                     alt="Wakafwib.id Logo" 
+                     class="w-24 h-24 object-contain drop-shadow-lg"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="w-24 h-24 bg-green-100 rounded-full shadow-lg items-center justify-center" style="display: none;">
+                    <svg class="w-12 h-12 text-green-800" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                        <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main heading -->
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-4 tracking-tight">
+            WAKAFWIB.ID
+        </h1>
+        
+        <!-- Subtitle -->
+        <p class="text-xl md:text-2xl text-green-100 mb-8 font-light">
+            Platform Wakaf Digital Terpercaya
+        </p>
+        
+
+        
+        <!-- Launch button -->
+        <div class="relative flex justify-center">
+            <div class="water-wave"></div>
+            <div class="water-wave"></div>
+            <div class="water-wave"></div>
+            <button 
+                onclick="launchWebsite()" 
+                class="launch-button text-white font-bold flex flex-col items-center justify-center relative overflow-hidden group"
+            >
+                <div class="text-6xl mb-2 relative z-10">🚀</div>
+                <div class="text-xl font-bold text-center leading-tight relative z-10">
+                    LAUNCH<br>NOW
+                </div>
+            </button>
+        </div>
+        
+        <!-- Additional info -->
+        <p class="text-green-200 mt-8 text-sm">
+            Klik tombol di atas untuk mengunjungi wakafwib.id
+        </p>
+    </div>
+    
+    <script>
+        function launchWebsite() {
+            // Add a small delay for visual feedback
+            setTimeout(() => {
+                window.open('https://wakafwib.id/', '_blank');
+            }, 200);
+        }
+        
+        // Add ripple effect on button click
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.launch-button')) {
+                const button = e.target.closest('.launch-button');
+                const rect = button.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                const ripple = document.createElement('div');
+                ripple.className = 'ripple';
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                
+                button.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 800);
+            }
+        });
+        
+        // Add some interactive sparkles on click
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.launch-button')) {
+                createSparkleEffect(e.clientX, e.clientY);
+            }
+        });
+        
+        function createSparkleEffect(x, y) {
+            for (let i = 0; i < 6; i++) {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'absolute w-2 h-2 bg-green-300 rounded-full pointer-events-none';
+                sparkle.style.left = x + 'px';
+                sparkle.style.top = y + 'px';
+                sparkle.style.transform = 'translate(-50%, -50%)';
+                sparkle.style.animation = `sparkleOut 0.6s ease-out forwards`;
+                
+                const angle = (i / 6) * Math.PI * 2;
+                const distance = 50 + Math.random() * 30;
+                const endX = Math.cos(angle) * distance;
+                const endY = Math.sin(angle) * distance;
+                
+                sparkle.style.setProperty('--end-x', endX + 'px');
+                sparkle.style.setProperty('--end-y', endY + 'px');
+                
+                document.body.appendChild(sparkle);
+                
+                setTimeout(() => sparkle.remove(), 600);
+            }
+        }
+        
+        // Add CSS for sparkle effect
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes sparkleOut {
+                0% {
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(1);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translate(calc(-50% + var(--end-x)), calc(-50% + var(--end-y))) scale(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9751ab41074d81c2',t:'MTc1NjE5MzkwMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
